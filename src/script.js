@@ -1,13 +1,12 @@
+// Menu Toggle Logic
 const menuBtn = document.getElementById("menuButton");
 const menuCloseBtn = document.getElementById("menuClose");
 const menuContent = document.getElementById("menuContent");
 
-menuBtn.addEventListener("click", () => {
+function toggleMenu() {
   menuContent.classList.toggle("hidden");
   menuCloseBtn.classList.toggle("hidden");
-});
+}
 
-menuCloseBtn.addEventListener("click", () => {
-  menuContent.classList.toggle("hidden");
-  menuCloseBtn.classList.toggle("hidden");
-});
+menuBtn.addEventListener("click", toggleMenu);
+menuCloseBtn.addEventListener("click", toggleMenu);
