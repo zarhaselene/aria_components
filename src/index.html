@@ -41,23 +41,49 @@
           class="hidden flex-col md:flex md:flex-row space-y-3 md:space-y-0 md:space-x-8 bg-slate-800 md:p-0 md:bg-transparent absolute top-0 left-0 p-12 h-svh md:h-auto md:relative"
           aria-hidden="true"
         >
-          <li class="mt-5 md:mt-0 hover:underline">
-            <a href="#">Hem</a>
+          <li role="none" class="mt-5 md:mt-0 hover:underline">
+            <a href="#" role="menuitem">Home</a>
           </li>
-          <li class="hover:underline">
-            <a href="#">Om oss</a>
+          <li role="none" class="hover:underline">
+            <a href="#" role="menuitem">About us</a>
           </li>
-          <li class="hover:underline">
-            <a href="#">Tjänster</a>
+          <li role="none" class="hover:underline">
+            <a href="#" role="menuitem">Services</a>
           </li>
-          <li class="hover:underline">
-            <a href="#">Kontakt</a>
+          <li role="none" class="hover:underline">
+            <a href="#" role="menuitem">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main></main>
+    <main class="mt-12">
+      <!-- Modal -->
+      <button
+        id="openModalBtn"
+        aria-haspopup="dialog"
+        aria-controls="accessibleModal"
+      >
+        Open modal
+      </button>
+
+      <div
+        id="accessibleModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-hidden="true"
+        class="hidden"
+      >
+        <div class="bg-slate-500 p-6 rounded shadow-lg w-full">
+          <h2 id="modalTitle">Example of modal window</h2>
+          <p>Here is some text in the modal window.</p>
+          <button id="closeModalBtn" class="hover:underline mt-5">Close</button>
+        </div>
+      </div>
+
+      <hr class="my-8" />
+    </main>
 
     <script src="script.js"></script>
   </body>
