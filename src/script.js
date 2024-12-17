@@ -46,12 +46,9 @@ const closeDialogBtn = document.getElementById("closeDialogBtn");
 const dialog = document.getElementById("accessibleDialog");
 
 openDialogBtn.addEventListener("click", () => {
-  lastFocusedElement = document.activeElement;
   dialog.showModal();
-  closeDialogBtn.focus();
 });
 
 closeDialogBtn.addEventListener("click", () => {
   dialog.close();
-  lastFocusedElement.focus();
 });
