@@ -83,6 +83,27 @@
       </div>
 
       <hr class="my-8" />
+
+      <button
+        id="openDialogBtn"
+        aria-haspopup="dialog"
+        aria-controls="accessibleDialog"
+      >
+        Open dialog
+      </button>
+
+      <!-- Dialog-element -->
+      <dialog
+        id="accessibleDialog"
+        aria-labelledby="dialogTitle"
+        class="bg-slate-500 p-6 rounded shadow-lg text-white"
+      >
+        <h2 id="dialogTitle">
+          Example of accessible modal window with &lt;dialog&gt;
+        </h2>
+        <p>Here is the content of the modal window.</p>
+        <button id="closeDialogBtn" class="hover:underline mt-5">Close</button>
+      </dialog>
     </main>
 
     <script src="script.js"></script>

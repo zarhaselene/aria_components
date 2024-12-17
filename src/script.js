@@ -39,3 +39,19 @@ function handleModalKeyDown(event) {
 
 openModalBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
+
+// Dialog Logic
+const openDialogBtn = document.getElementById("openDialogBtn");
+const closeDialogBtn = document.getElementById("closeDialogBtn");
+const dialog = document.getElementById("accessibleDialog");
+
+openDialogBtn.addEventListener("click", () => {
+  lastFocusedElement = document.activeElement;
+  dialog.showModal();
+  closeDialogBtn.focus();
+});
+
+closeDialogBtn.addEventListener("click", () => {
+  dialog.close();
+  lastFocusedElement.focus();
+});
