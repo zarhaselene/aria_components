@@ -5,9 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aria components</title>
     <link rel="stylesheet" href="/src/output.css" />
+    <script
+      src="https://kit.fontawesome.com/839aa981e5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
+  <body class="bg-slate-900 text-white relative p-8">
+    <header>
+      <!-- Open menu button -->
+      <button
+        id="menuButton"
+        class="md:hidden"
+        aria-expanded="false"
+        aria-controls="menuContent"
+        aria-label="Open navigation menu"
+      >
+        <i class="fa fa-bars text-xl" aria-hidden="true"></i>
+      </button>
+
+      <!-- Close menu button -->
+      <button
+        id="menuClose"
+        class="hidden absolute left-8 top-8 z-10"
+        aria-expanded="true"
+        aria-controls="menuContent"
+        aria-label="Close navigation menu"
+      >
+        <i class="fa fa-close text-xl" aria-hidden="true"></i>
+      </button>
+
+      <!-- Navigation menu -->
+      <nav aria-label="Main Navigation">
+        <ul
+          id="menuContent"
+          class="hidden flex-col md:flex md:flex-row space-y-3 md:space-y-0 md:space-x-8 bg-slate-800 md:p-0 md:bg-transparent absolute top-0 left-0 p-12 h-svh md:h-auto md:relative"
+          aria-hidden="true"
+        >
+          <li class="mt-5 md:mt-0 hover:underline">
+            <a href="#">Hem</a>
+          </li>
+          <li class="hover:underline">
+            <a href="#">Om oss</a>
+          </li>
+          <li class="hover:underline">
+            <a href="#">Tjänster</a>
+          </li>
+          <li class="hover:underline">
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main></main>
+
     <script src="script.js"></script>
   </body>
 </html>
-gi
